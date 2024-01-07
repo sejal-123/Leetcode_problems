@@ -19,7 +19,6 @@ class Solution {
                 }
                 else if(nums[i] == nums[k] || nums[j] == nums[k]) {
                     k++;
-                    // System.out.println(nums[j]);
                 }
                 else if (nums[i] == nums[j]) {
                     j++;
