@@ -1,1 +1,1 @@
-This repository contains leetcode problems.
+This repository contains leetcode problems solved using Java
