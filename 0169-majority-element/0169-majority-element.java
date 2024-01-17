@@ -6,13 +6,11 @@ class Solution {
         while(i < nums.length - 1) {
             if (nums[i] == nums[i+1]) {
                 count += 1;
-                System.out.println(count);
             } else {
                 if (count > max) {
                     max = count;
                     count = 0;
                     ele = nums[i];
-                    System.out.println(max + " " +  ele);
                 }
             }
             i++;
@@ -22,7 +20,6 @@ class Solution {
                     max = count;
                     count = 0;
                     ele = nums[i];
-                    System.out.println(max + " " +  ele);
             }
         }
         return ele;
