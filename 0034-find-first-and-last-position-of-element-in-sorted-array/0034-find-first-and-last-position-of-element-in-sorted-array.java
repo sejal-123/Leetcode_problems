@@ -5,14 +5,12 @@ class Solution {
         while (i < nums.length) {
             if (nums[i] == target) {
                ans[0] = i;
-                System.out.println(i);
                 break;
             }
             i++;
         }
         while (j > -1 ) {
             if (nums[j] == target) {
-                System.out.println(j);
                 ans[1] = j;
                 break;
             }
