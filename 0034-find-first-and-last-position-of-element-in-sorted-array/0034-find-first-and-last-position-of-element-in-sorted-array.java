@@ -1,7 +1,7 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
         int ans[] = {-1, -1};
-        int i = 0, j = nums.length-1, found1 = 0, found2 = 0;
+        int i = 0, j = nums.length-1;
         while (i < nums.length) {
             if (nums[i] == target) {
                ans[0] = i;
