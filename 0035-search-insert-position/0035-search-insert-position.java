@@ -12,7 +12,6 @@ class Solution {
                 i = mid+1;
             }
         }
-        System.out.println(i +  " "+ j);
         if (nums[i] < target) 
             return i+1;
         else
