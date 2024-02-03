@@ -8,13 +8,13 @@ class Solution {
         }
         int t[] = new int[strs.length];
         List<List<String>> ans =  new ArrayList<List<String>>();
-        for (int i = 0; i < temp.size(); i++) {
+        for (int i = 0; i < strs.length; i++) {
             ArrayList<String> temp1 = new ArrayList<>();
             if (t[i] == 0) {
                 temp1.add(strs[i]);
                 t[i] = 1;
             }
-            for (int j = i+1; j < temp.size(); j++) {
+            for (int j = i+1; j < strs.length; j++) {
                 if (temp.get(i).equals(temp.get(j)) && t[j] == 0) {
                     temp1.add(strs[j]);
                     t[j] = 1;
