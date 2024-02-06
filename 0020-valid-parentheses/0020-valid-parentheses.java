@@ -10,7 +10,7 @@ class Solution {
             return false;
         }
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '[') {
+            if (map.containsKey(s.charAt(i))) {
                 arr.add(lastVisited);
                 lastVisited = s.charAt(i);
             } else {
