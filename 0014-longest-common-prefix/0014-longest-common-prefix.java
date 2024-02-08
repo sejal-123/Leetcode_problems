@@ -10,11 +10,7 @@ class Solution {
                 if (s.equals(strs[strs.length - 1]))
                     return minLengthWord;
             }
-            String temp = "";
-            for (int i = 0; i < minLengthWord.length() - 1; i++) {
-                temp += minLengthWord.charAt(i);
-            }
-            minLengthWord = temp;
+            minLengthWord = minLengthWord.substring(0, minLengthWord.length() - 1);
         }
         return "";
     }
