@@ -1,6 +1,5 @@
 class Solution {
     public String longestCommonPrefix(String[] strs) {
-        Arrays.sort(strs);
         String minLengthWord = strs[0];
         while (minLengthWord.length() > 0) {
             for (String s: strs) {
