@@ -5,22 +5,23 @@ class Solution {
         }
         StringBuilder ans = new StringBuilder();
         Map<Character, Integer> map = new HashMap<>();
-        TreeMap<Integer, List<Character>> lst = new TreeMap<>(Collections.reverseOrder());
         for(int i = 0; i < s.length(); i++) {
             map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0)+1);
         }
-        for (Map.Entry<Character, Integer> entry: map.entrySet()) {
-            if (!lst.containsKey(entry.getValue())) {
-                lst.put(entry.getValue(), new ArrayList<>());
-            }
-            lst.get(entry.getValue()).add(entry.getKey());
+        List<Character>[] arr = new List[s.length()+1];
+        for (Character key: map.keySet()) {
+            int val = map.get(key);
+            if (arr[val] == null)
+                arr[val] = new ArrayList<>();
+            arr[val].add(key);
         }
-        for (Map.Entry<Integer, List<Character>> entry: lst.entrySet()) {
-            for (char c: entry.getValue()) {
-                ans.append(String.valueOf(c).repeat(entry.getKey()));
+        for (int i = arr.length-1; i >= 0; i--){
+            if (arr[i] != null) {
+                for (char ch: arr[i]) {
+                    ans.append(String.valueOf(ch).repeat(map.get(ch)));
+                }
             }
-        }
-        
+        }  
         return ans.toString();
     }
 }
