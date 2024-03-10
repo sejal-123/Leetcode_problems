@@ -14,8 +14,7 @@ class Solution {
         while(n != null) {
             if (n.next != null) {
                 ListNode next = n.next;
-                int ans = findDivisor(n.val, n.next.val);
-                ListNode temp = new ListNode(ans);
+                ListNode temp = new ListNode(findDivisor(n.val, n.next.val));
                 n.next = temp;
                 temp.next = next;
                 n = next;
