@@ -40,7 +40,7 @@ class Solution {
         } else if (big % (big - small) == 0 && small % (big - small) == 0) {
             return big-small;
         } else  {
-            int i = small-1; 
+            int i = small / 2; 
             while(i > 0) {
                 if (small % i == 0 && big % i == 0) {
                     return i;
