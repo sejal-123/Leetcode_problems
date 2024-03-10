@@ -25,28 +25,9 @@ class Solution {
         return head;
     }
 
-    public int findDivisor(int n1, int n2) {
-        int big = 0, small = 0;
-        if (n1 > n2) {
-            big = n1;
-            small = n2;
-        } else {
-            big = n2;
-            small = n1;
-        }
-        if (big % small == 0) {
-            return small;
-        } else if (big % (big - small) == 0 && small % (big - small) == 0) {
-            return big-small;
-        } else  {
-            int i = small / 2; 
-            while(i > 0) {
-                if (small % i == 0 && big % i == 0) {
-                    return i;
-                }
-                i--;
-            }
-            return 1;
-        }
+    public int findDivisor(int a, int b) {
+        if (b == 0) 
+            return a;
+        return findDivisor(b, a % b);
     }
 }
