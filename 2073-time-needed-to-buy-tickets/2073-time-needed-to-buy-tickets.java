@@ -9,7 +9,6 @@ class Solution {
         }
         while (i < m) {
             for (int j = 0; j < tickets.length; j++) {
-                System.out.println(tickets[j]);
                 if (tickets[k] == 0 && j == k) {
                     i = m;
                     break;
