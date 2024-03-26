@@ -1,16 +1,9 @@
 class Solution {
     public int timeRequiredToBuy(int[] tickets, int k) {
         int i = 0, c = 0;
-        int m = -1;
-        for (Integer j: tickets) {
-            if (j > m) {
-                m = j;
-            }
-        }
-        while (i < m) {
+        while (tickets[k] > 0) {
             for (int j = 0; j < tickets.length; j++) {
                 if (tickets[k] == 0) {
-                    i = m;
                     break;
                 }
                 else if (tickets[j] > 0) {
@@ -18,7 +11,6 @@ class Solution {
                     c++;
                 } 
             }
-            i++;
         }
         return c;
     }
