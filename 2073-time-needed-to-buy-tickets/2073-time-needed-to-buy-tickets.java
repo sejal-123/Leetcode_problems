@@ -9,10 +9,7 @@ class Solution {
         }
         while (i < m) {
             for (int j = 0; j < tickets.length; j++) {
-                if (tickets[k] == 0 && j == k) {
-                    i = m;
-                    break;
-                } else if (tickets[k] == 0) {
+                if (tickets[k] == 0) {
                     i = m;
                     break;
                 }
