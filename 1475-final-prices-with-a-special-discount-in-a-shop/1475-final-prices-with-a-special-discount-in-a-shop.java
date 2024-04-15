@@ -10,13 +10,11 @@ class Solution {
                 j = i+1;
                 if (prices[i] >= prices[j]) {
                     temp[i] = prices[i] - prices[j];
-                    System.out.println(temp);
                     i--;
                 } else {
                     while (j < prices.length) {
                         if (prices[i] >= prices[j]) {
                             temp[i] = prices[i] - prices[j];
-                            System.out.println(temp);
                             i--;
                             break;
                         }
