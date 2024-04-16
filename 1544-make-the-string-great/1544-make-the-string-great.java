@@ -24,7 +24,7 @@ class Solution {
         }
         int i = ch.length - 2, j = ch.length - 1;
         while (i >= 0) {
-            if ((Character.isUpperCase(ch[i]) && Character.isLowerCase(ch[j])) ||(Character.isUpperCase(ch[j]) && Character.isLowerCase(ch[i]))) {
+            if (((Character.isUpperCase(ch[i]) && Character.isLowerCase(ch[j])) ||(Character.isUpperCase(ch[j]) && Character.isLowerCase(ch[i]))) && Character.toLowerCase(ch[i]) == Character.toLowerCase(ch[j])) {
                 s = s.substring(0, i) + s.substring(j+1, s.length());
                 System.out.println(s);
                 return s;
