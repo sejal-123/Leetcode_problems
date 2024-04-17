@@ -6,7 +6,9 @@ class Solution {
             if (ch == '#') {
                 if (st1.isEmpty()) {
                     continue;
-                } else 
+                } 
+                else 
+                    st1.pop();
             }
             else {
                 st1.push(ch);
