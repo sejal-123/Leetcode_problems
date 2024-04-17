@@ -6,7 +6,7 @@ class Solution {
             System.out.println(ch);
             if (ch == '#') {
                 if (st1.isEmpty()) {
-                    break;
+                    continue;
                 } else 
                 System.out.println(st1.pop());
             }
@@ -19,7 +19,7 @@ class Solution {
         for (char ch: t.toCharArray()) {
             if (ch == '#') {
                 if (st2.isEmpty()) {
-                    break;
+                    continue;
                 }
                 else
                     st2.pop();
