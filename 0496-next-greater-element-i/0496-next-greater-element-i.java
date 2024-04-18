@@ -4,7 +4,7 @@ class Solution {
         Map<Integer, Integer> map = new HashMap<>();
         Stack<Integer> st = new Stack<>();
         for (int n: nums2) {
-            while (!st.isEmpty() && n > st.peek()) {
+            if (!st.isEmpty() && n > st.peek()) {
                 map.put(st.pop(), n);
             }
             st.push(n);
