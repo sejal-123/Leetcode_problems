@@ -1,19 +1,17 @@
 class Solution {
     public int minLength(String s) {
-        return reduceStringLength(s).length();
-    }
-
-    public String reduceStringLength(String s) {
-        if (s.contains("AB") || s.contains("CD")) {
-            int index = -1;
-            if (s.contains("AB")) {
-                index = s.indexOf("AB");
-            } else {
-                index = s.indexOf("CD");
+        Stack<Character> st = new Stack<>();
+        int n = s.length();
+        st.push(s.charAt(0));
+        for(int i=1; i<n; i++)
+        {
+            if(!st.isEmpty() && ((s.charAt(i)=='B'&&st.peek()=='A') || (s.charAt(i)=='D' && st.peek()=='C')))
+            {
+                st.pop();
             }
-            s = s.substring(0, index) + s.substring(index+2, s.length());
-            s = reduceStringLength(s);
-        }
-        return s;
+            else
+                st.push(s.charAt(i));
+            }
+        return st.size();
     }
 }
