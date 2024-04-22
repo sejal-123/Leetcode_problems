@@ -14,11 +14,6 @@ class Solution {
             s = s.substring(0, index) + s.substring(index+2, s.length());
             s = reduceStringLength(s);
         }
-        // if (s.contains("CD")) {
-        //     int 
-        //     s = s.substring(0, index) + s.substring(index+2, s.length());
-        //     s = reduceStringLength(s);
-        // }
         return s;
     }
 }
